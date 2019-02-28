@@ -1,0 +1,6 @@
+bin/
+blockchain-explorer/
+chaincode/
+crypto-config/
+fabric-config
+server/

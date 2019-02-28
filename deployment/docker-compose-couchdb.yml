@@ -1,0 +1,48 @@
+
+version: '2'
+
+networks:
+    behave:
+
+
+services:
+    
+    couchdb02:
+        extends:
+            file: docker-compose-base.yml
+            service: couchdb
+        container_name: couchdb02
+        # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+        # for example map it to utilize Fauxton User Interface in dev environments.
+        ports:
+          - "6984:5984"
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+    couchdb11:
+        extends:
+            file: docker-compose-base.yml
+            service: couchdb
+        container_name: couchdb11
+        # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+        # for example map it to utilize Fauxton User Interface in dev environments.
+        ports:
+          - "7984:5984"
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+    couchdb12:
+        extends:
+            file: docker-compose-base.yml
+            service: couchdb
+        container_name: couchdb12
+        # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+        # for example map it to utilize Fauxton User Interface in dev environments.
+        ports:
+          - "8984:5984"
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}

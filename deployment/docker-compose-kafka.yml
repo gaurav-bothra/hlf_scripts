@@ -1,0 +1,1133 @@
+
+version: '2'
+
+networks:
+    behave:
+
+services:
+
+    couchdb00:
+        extends:
+            file: docker-compose-base.yml
+            service: couchdb
+        container_name: couchdb00
+        # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+        # for example map it to utilize Fauxton User Interface in dev environments.
+        ports:
+          - "1984:5984"
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+    couchdb01:
+        extends:
+            file: docker-compose-base.yml
+            service: couchdb
+        container_name: couchdb01
+        # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+        # for example map it to utilize Fauxton User Interface in dev environments.
+        ports:
+          - "2984:5984"
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+    
+    couchdb02:
+        extends:
+            file: docker-compose-base.yml
+            service: couchdb
+        container_name: couchdb02
+        # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+        # for example map it to utilize Fauxton User Interface in dev environments.
+        ports:
+          - "3984:5984"
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+
+    couchdb10:
+        extends:
+            file: docker-compose-base.yml
+            service: couchdb
+        container_name: couchdb10
+        # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+        # for example map it to utilize Fauxton User Interface in dev environments.
+        ports:
+          - "4984:5984"
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+
+    
+    couchdb11:
+        extends:
+            file: docker-compose-base.yml
+            service: couchdb
+        container_name: couchdb11
+        # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+        # for example map it to utilize Fauxton User Interface in dev environments.
+        ports:
+          - "5984:5984"
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+
+    couchdb12:
+        extends:
+            file: docker-compose-base.yml
+            service: couchdb
+        container_name: couchdb12
+        # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+        # for example map it to utilize Fauxton User Interface in dev environments.
+        ports:
+          - "6984:5984"
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+
+    couchdb20:
+        extends:
+            file: docker-compose-base.yml
+            service: couchdb
+        container_name: couchdb20
+        # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+        # for example map it to utilize Fauxton User Interface in dev environments.
+        ports:
+          - "7984:5984"
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+    
+    couchdb21:
+        extends:
+            file: docker-compose-base.yml
+            service: couchdb
+        container_name: couchdb21
+        # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+        # for example map it to utilize Fauxton User Interface in dev environments.
+        ports:
+          - "8984:5984"
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+
+
+    couchdb22:
+        extends:
+            file: docker-compose-base.yml
+            service: couchdb
+        container_name: couchdb22
+        # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+        # for example map it to utilize Fauxton User Interface in dev environments.
+        ports:
+          - "9984:5984"
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+
+    couchdb30:
+        extends:
+            file: docker-compose-base.yml
+            service: couchdb
+        container_name: couchdb30
+        # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+        # for example map it to utilize Fauxton User Interface in dev environments.
+        ports:
+          - "10984:5984"
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+
+
+    couchdb31:
+        extends:
+            file: docker-compose-base.yml
+            service: couchdb
+        container_name: couchdb31
+        # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+        # for example map it to utilize Fauxton User Interface in dev environments.
+        ports:
+          - "11984:5984"
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+
+
+    couchdb32:
+        extends:
+            file: docker-compose-base.yml
+            service: couchdb
+        container_name: couchdb32
+        # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+        # for example map it to utilize Fauxton User Interface in dev environments.
+        ports:
+          - "12984:5984"
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+
+
+    couchdb40:
+        extends:
+            file: docker-compose-base.yml
+            service: couchdb
+        container_name: couchdb40
+        # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+        # for example map it to utilize Fauxton User Interface in dev environments.
+        ports:
+          - "13984:5984"
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+
+
+    couchdb41:
+        extends:
+            file: docker-compose-base.yml
+            service: couchdb
+        container_name: couchdb41
+        # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+        # for example map it to utilize Fauxton User Interface in dev environments.
+        ports:
+          - "14984:5984"
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+
+    couchdb42:
+        extends:
+            file: docker-compose-base.yml
+            service: couchdb
+        container_name: couchdb42
+        # Comment/Uncomment the port mapping if you want to hide/expose the CouchDB service,
+        # for example map it to utilize Fauxton User Interface in dev environments.
+        ports:
+          - "15984:5984"
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+
+    ca.vendor.in.ril.com:
+        image: hyperledger/fabric-ca
+        environment:
+            - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
+            - FABRIC_CA_SERVER_CA_NAME=ca.vendor.in.ril.com
+            - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.vendor.in.ril.com-cert.pem
+            - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/3b8f5d24aa310234c28390a7a7e0786fdf1f3e67d945eab693fd6da8e3cab5e6_sk
+        ports:
+            - "1054:7054"
+        command: sh -c 'fabric-ca-server start -b admin:adminpw'
+        volumes:
+            - ../crypto-config/peerOrganizations/vendor.in.ril.com/ca/:/etc/hyperledger/fabric-ca-server-config
+        container_name: ca.vendor.in.ril.com
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+    ca.rls.in.ril.com:
+        image: hyperledger/fabric-ca
+        environment:
+            - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
+            - FABRIC_CA_SERVER_CA_NAME=ca.rls.in.ril.com
+            - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.rls.in.ril.com-cert.pem
+            - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/feba2ecddc812de47b2e7401030262350d5301442596588f8df32dc1575374b3_sk
+        ports:
+            - "2054:7054"
+        command: sh -c 'fabric-ca-server start -b admin:adminpw'
+        volumes:
+            - ../crypto-config/peerOrganizations/rls.in.ril.com/ca/:/etc/hyperledger/fabric-ca-server-config
+        container_name: ca.rls.in.ril.com
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+    ca.distributor.in.ril.com:
+        image: hyperledger/fabric-ca
+        environment:
+            - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
+            - FABRIC_CA_SERVER_CA_NAME=ca.distributor.in.ril.com
+            - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.distributor.in.ril.com-cert.pem
+            - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/bdbcb7808a1d3d5aa94a8d898af46b6eb3d51cfcd8b0fc916331d0c453798f7e_sk
+        ports:
+            - "3054:7054"
+        command: sh -c 'fabric-ca-server start -b admin:adminpw'
+        volumes:
+            - ../crypto-config/peerOrganizations/distributor.in.ril.com/ca/:/etc/hyperledger/fabric-ca-server-config
+        container_name: ca.distributor.in.ril.com
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+    
+    ca.retailer.in.ril.com:
+        image: hyperledger/fabric-ca
+        environment:
+            - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
+            - FABRIC_CA_SERVER_CA_NAME=ca.retailer.in.ril.com
+            - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.retailer.in.ril.com-cert.pem
+            - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/3084b618a17a70af53cd3ebf360d1d18c60b7e7414708f706a7e839b9d10cc9c_sk
+        ports:
+            - "4054:7054"
+        command: sh -c 'fabric-ca-server start -b admin:adminpw'
+        volumes:
+            - ../crypto-config/peerOrganizations/retailer.in.ril.com/ca/:/etc/hyperledger/fabric-ca-server-config
+        container_name: ca.retailer.in.ril.com
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+    
+    ca.regulator.in.ril.com:
+        image: hyperledger/fabric-ca
+        environment:
+            - FABRIC_CA_HOME=/etc/hyperledger/fabric-ca-server
+            - FABRIC_CA_SERVER_CA_NAME=ca.regulator.in.ril.com
+            - FABRIC_CA_SERVER_CA_CERTFILE=/etc/hyperledger/fabric-ca-server-config/ca.regulator.in.ril.com-cert.pem
+            - FABRIC_CA_SERVER_CA_KEYFILE=/etc/hyperledger/fabric-ca-server-config/1549d20a7ddf86babfa95a20f2f50f9ad43da50793ac001896a886137809864a_sk
+        ports:
+            - "5054:7054"
+        command: sh -c 'fabric-ca-server start -b admin:adminpw'
+        volumes:
+            - ../crypto-config/peerOrganizations/regulator.in.ril.com/ca/:/etc/hyperledger/fabric-ca-server-config
+        container_name: ca.regulator.in.ril.com
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+
+    zookeeper0:
+        extends:
+            file: docker-compose-base.yml
+            service: zookeeper
+        container_name: zookeeper0
+        environment:
+            - ZOO_MY_ID=1
+            - ZOO_SERVERS=server.1=zookeeper0:2888:3888 server.2=zookeeper1:2888:3888 server.3=zookeeper2:2888:3888
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+
+    zookeeper1:
+        extends:
+            file: docker-compose-base.yml
+            service: zookeeper
+        container_name: zookeeper1
+        environment:
+            - ZOO_MY_ID=2
+            - ZOO_SERVERS=server.1=zookeeper0:2888:3888 server.2=zookeeper1:2888:3888 server.3=zookeeper2:2888:3888
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+
+    zookeeper2:
+        extends:
+            file: docker-compose-base.yml
+            service: zookeeper
+        container_name: zookeeper2
+        environment:
+            - ZOO_MY_ID=3
+            - ZOO_SERVERS=server.1=zookeeper0:2888:3888 server.2=zookeeper1:2888:3888 server.3=zookeeper2:2888:3888
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+
+    kafka0:
+        extends:
+            file: docker-compose-base.yml
+            service: kafka
+        container_name: kafka0
+        environment:
+            - KAFKA_BROKER_ID=0
+            - KAFKA_ZOOKEEPER_CONNECT=zookeeper0:2181,zookeeper1:2181,zookeeper2:2181
+            - KAFKA_MESSAGE_MAX_BYTES=${KAFKA_MESSAGE_MAX_BYTES}
+            - KAFKA_REPLICA_FETCH_MAX_BYTES=${KAFKA_REPLICA_FETCH_MAX_BYTES}
+            - KAFKA_REPLICA_FETCH_RESPONSE_MAX_BYTES=${KAFKA_REPLICA_FETCH_RESPONSE_MAX_BYTES}
+        depends_on:
+            - zookeeper0
+            - zookeeper1
+            - zookeeper2
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+
+    kafka1:
+        extends:
+            file: docker-compose-base.yml
+            service: kafka
+        container_name: kafka1
+        environment:
+            - KAFKA_BROKER_ID=1
+            - KAFKA_ZOOKEEPER_CONNECT=zookeeper0:2181,zookeeper1:2181,zookeeper2:2181
+            - KAFKA_MESSAGE_MAX_BYTES=${KAFKA_MESSAGE_MAX_BYTES}
+            - KAFKA_REPLICA_FETCH_MAX_BYTES=${KAFKA_REPLICA_FETCH_MAX_BYTES}
+            - KAFKA_REPLICA_FETCH_RESPONSE_MAX_BYTES=${KAFKA_REPLICA_FETCH_RESPONSE_MAX_BYTES}
+        depends_on:
+            - zookeeper0
+            - zookeeper1
+            - zookeeper2
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+
+    kafka2:
+        extends:
+            file: docker-compose-base.yml
+            service: kafka
+        container_name: kafka2
+        environment:
+            - KAFKA_BROKER_ID=2
+            - KAFKA_ZOOKEEPER_CONNECT=zookeeper0:2181,zookeeper1:2181,zookeeper2:2181
+            - KAFKA_MESSAGE_MAX_BYTES=${KAFKA_MESSAGE_MAX_BYTES}
+            - KAFKA_REPLICA_FETCH_MAX_BYTES=${KAFKA_REPLICA_FETCH_MAX_BYTES}
+            - KAFKA_REPLICA_FETCH_RESPONSE_MAX_BYTES=${KAFKA_REPLICA_FETCH_RESPONSE_MAX_BYTES}
+        depends_on:
+            - zookeeper0
+            - zookeeper1
+            - zookeeper2
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+
+    kafka3:
+        extends:
+            file: docker-compose-base.yml
+            service: kafka
+        container_name: kafka3
+        environment:
+            - KAFKA_BROKER_ID=3
+            - KAFKA_ZOOKEEPER_CONNECT=zookeeper0:2181,zookeeper1:2181,zookeeper2:2181
+            - KAFKA_MESSAGE_MAX_BYTES=${KAFKA_MESSAGE_MAX_BYTES}
+            - KAFKA_REPLICA_FETCH_MAX_BYTES=${KAFKA_REPLICA_FETCH_MAX_BYTES}
+            - KAFKA_REPLICA_FETCH_RESPONSE_MAX_BYTES=${KAFKA_REPLICA_FETCH_RESPONSE_MAX_BYTES}
+        depends_on:
+            - zookeeper0
+            - zookeeper1
+            - zookeeper2
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+
+    orderer0.in.ril.com:
+        extends:
+            file: docker-compose-base.yml
+            service: orderer
+        container_name: orderer0.in.ril.com
+        environment:
+            - ORDERER_HOST=orderer0.in.ril.com
+            - CONFIGTX_ORDERER_ORDERERTYPE=kafka
+            - CONFIGTX_ORDERER_KAFKA_BROKERS=[kafka0:9092,kafka1:9092,kafka2:9092,kafka3:9092]
+            - ORDERER_KAFKA_RETRY_SHORTINTERVAL=1s
+            - ORDERER_KAFKA_RETRY_SHORTTOTAL=30s
+            - ORDERER_KAFKA_VERBOSE=true
+            - ORDERER_GENERAL_GENESISPROFILE=SampleInsecureKafka
+            - ORDERER_ABSOLUTEMAXBYTES=${ORDERER_ABSOLUTEMAXBYTES}
+            - ORDERER_PREFERREDMAXBYTES=${ORDERER_PREFERREDMAXBYTES}
+        volumes:
+            - ../crypto-config/ordererOrganizations/in.ril.com/orderers/orderer0.in.ril.com/msp:/var/hyperledger/msp
+            - ../crypto-config/ordererOrganizations/in.ril.com/orderers/orderer0.in.ril.com/tls:/var/hyperledger/tls
+            - ../network-config/:/var/hyperledger/configs
+        depends_on:
+            - kafka0
+            - kafka1
+            - kafka2
+            - kafka3
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+        ports:
+          - 7050:7050
+
+    orderer1.in.ril.com:
+        extends:
+            file: docker-compose-base.yml
+            service: orderer
+        container_name: orderer1.in.ril.com
+        environment:
+            - ORDERER_HOST=orderer1.in.ril.com
+            - CONFIGTX_ORDERER_ORDERERTYPE=kafka
+            - CONFIGTX_ORDERER_KAFKA_BROKERS=[kafka0:9092,kafka1:9092,kafka2:9092,kafka3:9092]
+            - ORDERER_KAFKA_RETRY_SHORTINTERVAL=1s
+            - ORDERER_KAFKA_RETRY_SHORTTOTAL=30s
+            - ORDERER_KAFKA_RETRY_LONGINTERVAL=30s
+            - ORDERER_KAFKA_RETRY_LONGTOTAL=5m
+            - ORDERER_KAFKA_VERBOSE=true
+            - ORDERER_GENERAL_GENESISPROFILE=SampleInsecureKafka
+            - ORDERER_ABSOLUTEMAXBYTES=${ORDERER_ABSOLUTEMAXBYTES}
+            - ORDERER_PREFERREDMAXBYTES=${ORDERER_PREFERREDMAXBYTES}
+        volumes:
+            - ../crypto-config/ordererOrganizations/in.ril.com/orderers/orderer1.in.ril.com/msp:/var/hyperledger/msp
+            - ../crypto-config/ordererOrganizations/in.ril.com/orderers/orderer1.in.ril.com/tls:/var/hyperledger/tls
+            - ../network-config/:/var/hyperledger/configs
+        depends_on:
+            - kafka0
+            - kafka1
+            - kafka2
+            - kafka3
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+        ports:
+          - 8050:7050
+
+    orderer2.in.ril.com:
+        extends:
+            file: docker-compose-base.yml
+            service: orderer
+        container_name: orderer2.in.ril.com
+        environment:
+            - ORDERER_HOST=orderer2.in.ril.com
+            - CONFIGTX_ORDERER_ORDERERTYPE=kafka
+            - CONFIGTX_ORDERER_KAFKA_BROKERS=[kafka0:9092,kafka1:9092,kafka2:9092,kafka3:9092]
+            - ORDERER_KAFKA_RETRY_SHORTINTERVAL=1s
+            - ORDERER_KAFKA_RETRY_SHORTTOTAL=30s
+            - ORDERER_KAFKA_VERBOSE=true
+            - ORDERER_GENERAL_GENESISPROFILE=SampleInsecureKafka
+            - ORDERER_ABSOLUTEMAXBYTES=${ORDERER_ABSOLUTEMAXBYTES}
+            - ORDERER_PREFERREDMAXBYTES=${ORDERER_PREFERREDMAXBYTES}
+        volumes:
+            - ../crypto-config/ordererOrganizations/in.ril.com/orderers/orderer2.in.ril.com/msp:/var/hyperledger/msp
+            - ../crypto-config/ordererOrganizations/in.ril.com/orderers/orderer2.in.ril.com/tls:/var/hyperledger/tls
+            - ../network-config/:/var/hyperledger/configs
+        depends_on:
+            - kafka0
+            - kafka1
+            - kafka2
+            - kafka3
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+        ports:
+          - 9050:7050
+
+    peer0.vendor.in.ril.com:
+        extends:
+            file: docker-compose-base.yml
+            service: peer
+        container_name: peer0.vendor.in.ril.com
+        environment:
+            - CORE_PEER_CHAINCODELISTENADDRESS=peer0.vendor.in.ril.com:7052
+            - CORE_PEER_ID=peer0.vendor.in.ril.com
+            - CORE_PEER_ADDRESS=peer0.vendor.in.ril.com:7051
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.vendor.in.ril.com:7051
+            - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.vendor.in.ril.com:7051
+            - CORE_PEER_GOSSIP_ORGLEADER=${CORE_PEER_GOSSIP_ORGLEADER_PEER0_Vendor}
+            - CORE_PEER_GOSSIP_USELEADERELECTION=${CORE_PEER_GOSSIP_USELEADERELECTION_PEER0_Vendor}
+            - CORE_PEER_LOCALMSPID=VendorMSP
+            - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/var/hyperledger/users/Admin@vendor.in.ril.com/tls/ca.crt
+            - CORE_PEER_TLS_CLIENTCERT_FILE=/var/hyperledger/users/Admin@vendor.in.ril.com/tls/client.crt
+            - CORE_PEER_TLS_CLIENTKEY_FILE=/var/hyperledger/users/Admin@vendor.in.ril.com/tls/client.key
+            - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb00:5984
+            
+
+        volumes:
+            - ../crypto-config/peerOrganizations/vendor.in.ril.com/peers/peer0.vendor.in.ril.com/msp:/var/hyperledger/msp
+            - ../crypto-config/peerOrganizations/vendor.in.ril.com/peers/peer0.vendor.in.ril.com/tls:/var/hyperledger/tls
+            - ../crypto-config/peerOrganizations/vendor.in.ril.com/users:/var/hyperledger/users
+            - ../network-config/:/var/hyperledger/configs
+
+        depends_on:
+            - orderer0.in.ril.com
+            - orderer1.in.ril.com
+            - orderer2.in.ril.com
+            - couchdb00
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+        ports:
+          - 1051:7051
+          - 1052:7052
+          - 1053:7053
+
+    peer1.vendor.in.ril.com:
+        extends:
+            file: docker-compose-base.yml
+            service: peer
+        container_name: peer1.vendor.in.ril.com
+        environment:
+            - CORE_PEER_CHAINCODELISTENADDRESS=peer1.vendor.in.ril.com:7052
+            - CORE_PEER_ID=peer1.vendor.in.ril.com
+            - CORE_PEER_ADDRESS=peer1.vendor.in.ril.com:7051
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.vendor.in.ril.com:7051
+            - CORE_PEER_GOSSIP_OFabCarRGLEADER=${CORE_PEER_GOSSIP_ORGLEADER_PEER1_Vendor}
+            - CORE_PEER_GOSSIP_USELEADERELECTION=${CORE_PEER_GOSSIP_USELEADERELECTION_PEER1_Vendor}
+            - CORE_PEER_LOCALMSPID=VendorMSP
+            - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/var/hyperledger/users/Admin@vendor.in.ril.com/tls/ca.crt
+            - CORE_PEER_TLS_CLIENTCERT_FILE=/var/hyperledger/users/Admin@vendor.in.ril.com/tls/client.crt
+            - CORE_PEER_TLS_CLIENTKEY_FILE=/var/hyperledger/users/Admin@vendor.in.ril.com/tls/client.key
+            - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb01:5984
+            
+
+        volumes:
+            - ../crypto-config/peerOrganizations/vendor.in.ril.com/peers/peer1.vendor.in.ril.com/msp:/var/hyperledger/msp
+            - ../crypto-config/peerOrganizations/vendor.in.ril.com/peers/peer1.vendor.in.ril.com/tls:/var/hyperledger/tls
+            - ../crypto-config/peerOrganizations/vendor.in.ril.com/users:/var/hyperledger/users
+            - ../network-config/:/var/hyperledger/configs
+        depends_on:
+            - orderer0.in.ril.com
+            - orderer1.in.ril.com
+            - orderer2.in.ril.com
+            - couchdb01
+            - peer0.vendor.in.ril.com
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+        ports:
+          - 2051:7051
+          - 2052:7052
+          - 2053:7053
+
+
+    peer2.vendor.in.ril.com:
+        extends:
+            file: docker-compose-base.yml
+            service: peer
+        container_name: peer2.vendor.in.ril.com
+        environment:
+            - CORE_PEER_CHAINCODELISTENADDRESS=peer2.vendor.in.ril.com:7052
+            - CORE_PEER_ID=peer2.vendor.in.ril.com
+            - CORE_PEER_ADDRESS=peer2.vendor.in.ril.com:7051
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.vendor.in.ril.com:7051
+            - CORE_PEER_GOSSIP_ORGLEADER=${CORE_PEER_GOSSIP_ORGLEADER_PEER2_Vendor}
+            - CORE_PEER_GOSSIP_USELEADERELECTION=${CORE_PEER_GOSSIP_USELEADERELECTION_PEER2_Vendor}
+            - CORE_PEER_LOCALMSPID=VendorMSP
+            - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/var/hyperledger/users/Admin@vendor.in.ril.com/tls/ca.crt
+            - CORE_PEER_TLS_CLIENTCERT_FILE=/var/hyperledger/users/Admin@vendor.in.ril.com/tls/client.crt
+            - CORE_PEER_TLS_CLIENTKEY_FILE=/var/hyperledger/users/Admin@vendor.in.ril.com/tls/client.key
+            - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb02:5984
+            
+
+        volumes:
+            - ../crypto-config/peerOrganizations/vendor.in.ril.com/peers/peer2.vendor.in.ril.com/msp:/var/hyperledger/msp
+            - ../crypto-config/peerOrganizations/vendor.in.ril.com/peers/peer2.vendor.in.ril.com/tls:/var/hyperledger/tls
+            - ../crypto-config/peerOrganizations/vendor.in.ril.com/users:/var/hyperledger/users
+            - ../network-config/:/var/hyperledger/configs
+        depends_on:
+            - orderer0.in.ril.com
+            - orderer1.in.ril.com
+            - orderer2.in.ril.com
+            - couchdb02
+            - peer0.vendor.in.ril.com
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+        ports:
+          - 3051:7051
+          - 3052:7052
+          - 3053:7053
+
+    
+    peer0.rls.in.ril.com:
+        extends:
+            file: docker-compose-base.yml
+            service: peer
+        container_name: peer0.rls.in.ril.com
+        environment:
+            - CORE_PEER_CHAINCODELISTENADDRESS=peer0.rls.in.ril.com:7052
+            - CORE_PEER_ID=peer0.rls.in.ril.com
+            - CORE_PEER_ADDRESS=peer0.rls.in.ril.com:7051
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.rls.in.ril.com:7051
+            - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.rls.in.ril.com:7051
+            - CORE_PEER_GOSSIP_ORGLEADER=${CORE_PEER_GOSSIP_ORGLEADER_PEER0_RLS}
+            - CORE_PEER_GOSSIP_USELEADERELECTION=${CORE_PEER_GOSSIP_USELEADERELECTION_PEER0_RLS}
+            - CORE_PEER_LOCALMSPID=RLSMSP
+            - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/var/hyperledger/users/Admin@rls.in.ril.com/tls/ca.crt
+            - CORE_PEER_TLS_CLIENTCERT_FILE=/var/hyperledger/users/Admin@rls.in.ril.com/tls/client.crt
+            - CORE_PEER_TLS_CLIENTKEY_FILE=/var/hyperledger/users/Admin@rls.in.ril.com/tls/client.key
+            - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb10:5984
+
+        volumes:
+            - ../crypto-config/peerOrganizations/rls.in.ril.com/peers/peer0.rls.in.ril.com/msp:/var/hyperledger/msp
+            - ../crypto-config/peerOrganizations/rls.in.ril.com/peers/peer0.rls.in.ril.com/tls:/var/hyperledger/tls
+            - ../crypto-config/peerOrganizations/rls.in.ril.com/users:/var/hyperledger/users
+            - ../network-config/:/var/hyperledger/configs
+
+        depends_on:
+            - orderer0.in.ril.com
+            - orderer1.in.ril.com
+            - orderer2.in.ril.com
+            - couchdb10
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+        ports:
+          - 4051:7051
+          - 4052:7052
+          - 4053:7053
+
+    peer1.rls.in.ril.com:
+        extends:
+            file: docker-compose-base.yml
+            service: peer
+        container_name: peer1.rls.in.ril.com
+        environment:
+            - CORE_PEER_CHAINCODELISTENADDRESS=peer1.rls.in.ril.com:7052
+            - CORE_PEER_ID=peer1.rls.in.ril.com
+            - CORE_PEER_ADDRESS=peer1.rls.in.ril.com:7051
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.rls.in.ril.com:7051
+            - CORE_PEER_GOSSIP_ORGLEADER=${CORE_PEER_GOSSIP_ORGLEADER_PEER1_RLS}
+            - CORE_PEER_GOSSIP_USELEADERELECTION=${CORE_PEER_GOSSIP_USELEADERELECTION_PEER1_RLS}
+            - CORE_PEER_LOCALMSPID=RLSMSP
+            - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/var/hyperledger/users/Admin@rls.in.ril.com/tls/ca.crt
+            - CORE_PEER_TLS_CLIENTCERT_FILE=/var/hyperledger/users/Admin@rls.in.ril.com/tls/client.crt
+            - CORE_PEER_TLS_CLIENTKEY_FILE=/var/hyperledger/users/Admin@rls.in.ril.com/tls/client.key
+            - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb11:5984
+            
+        volumes:
+            - ../crypto-config/peerOrganizations/rls.in.ril.com/peers/peer1.rls.in.ril.com/msp:/var/hyperledger/msp
+            - ../crypto-config/peerOrganizations/rls.in.ril.com/peers/peer1.rls.in.ril.com/tls:/var/hyperledger/tls
+            - ../crypto-config/peerOrganizations/rls.in.ril.com/users:/var/hyperledger/users
+            - ../network-config/:/var/hyperledger/configs
+        depends_on:
+            - orderer0.in.ril.com
+            - orderer1.in.ril.com
+            - orderer2.in.ril.com
+            - couchdb11
+            - peer0.rls.in.ril.com
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+        ports:
+          - 5051:7051
+          - 5052:7052
+          - 5053:7053
+
+
+    peer2.rls.in.ril.com:
+        extends:
+            file: docker-compose-base.yml
+            service: peer
+        container_name: peer2.rls.in.ril.com
+        environment:
+            - CORE_PEER_CHAINCODELISTENADDRESS=peer2.rls.in.ril.com:7052
+            - CORE_PEER_ID=peer2.rls.in.ril.com
+            - CORE_PEER_ADDRESS=peer2.rls.in.ril.com:7051
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.rls.in.ril.com:7051
+            - CORE_PEER_GOSSIP_ORGLEADER=${CORE_PEER_GOSSIP_ORGLEADER_PEER2_RLS}
+            - CORE_PEER_GOSSIP_USELEADERELECTION=${CORE_PEER_GOSSIP_USELEADERELECTION_PEER2_RLS}
+            - CORE_PEER_LOCALMSPID=RLSMSP
+            - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/var/hyperledger/users/Admin@rls.in.ril.com/tls/ca.crt
+            - CORE_PEER_TLS_CLIENTCERT_FILE=/var/hyperledger/users/Admin@rls.in.ril.com/tls/client.crt
+            - CORE_PEER_TLS_CLIENTKEY_FILE=/var/hyperledger/users/Admin@rls.in.ril.com/tls/client.key
+            - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb12:5984
+            
+
+        volumes:
+            - ../crypto-config/peerOrganizations/rls.in.ril.com/peers/peer2.rls.in.ril.com/msp:/var/hyperledger/msp
+            - ../crypto-config/peerOrganizations/rls.in.ril.com/peers/peer2.rls.in.ril.com/tls:/var/hyperledger/tls
+            - ../crypto-config/peerOrganizations/rls.in.ril.com/users:/var/hyperledger/users
+            - ../network-config/:/var/hyperledger/configs
+        depends_on:
+            - orderer0.in.ril.com
+            - orderer1.in.ril.com
+            - orderer2.in.ril.com
+            - couchdb12
+            - peer0.rls.in.ril.com
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+        ports:
+          - 6051:7051
+          - 6052:7052
+          - 6053:7053
+    
+    peer0.distributor.in.ril.com:
+        extends:
+            file: docker-compose-base.yml
+            service: peer
+        container_name: peer0.distributor.in.ril.com
+        environment:
+            - CORE_PEER_CHAINCODELISTENADDRESS=peer0.distributor.in.ril.com:7052
+            - CORE_PEER_ID=peer0.distributor.in.ril.com
+            - CORE_PEER_ADDRESS=peer0.distributor.in.ril.com:7051
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.distributor.in.ril.com:7051
+            - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.distributor.in.ril.com:7051
+            - CORE_PEER_GOSSIP_ORGLEADER=${CORE_PEER_GOSSIP_ORGLEADER_PEER0_Distributor}
+            - CORE_PEER_GOSSIP_USELEADERELECTION=${CORE_PEER_GOSSIP_USELEADERELECTION_PEER0_Distributor}
+            - CORE_PEER_LOCALMSPID=DistributorMSP
+            - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/var/hyperledger/users/Admin@distributor.in.ril.com/tls/ca.crt
+            - CORE_PEER_TLS_CLIENTCERT_FILE=/var/hyperledger/users/Admin@distributor.in.ril.com/tls/client.crt
+            - CORE_PEER_TLS_CLIENTKEY_FILE=/var/hyperledger/users/Admin@distributor.in.ril.com/tls/client.key
+            - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb20:5984
+            
+
+        volumes:
+            - ../crypto-config/peerOrganizations/distributor.in.ril.com/peers/peer0.distributor.in.ril.com/msp:/var/hyperledger/msp
+            - ../crypto-config/peerOrganizations/distributor.in.ril.com/peers/peer0.distributor.in.ril.com/tls:/var/hyperledger/tls
+            - ../crypto-config/peerOrganizations/distributor.in.ril.com/users:/var/hyperledger/users
+            - ../network-config/:/var/hyperledger/configs
+
+        depends_on:
+            - orderer0.in.ril.com
+            - orderer1.in.ril.com
+            - orderer2.in.ril.com
+            - couchdb20
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+        ports:
+          - 7051:7051
+          - 7052:7052
+          - 7053:7053
+
+    peer1.distributor.in.ril.com:
+        extends:
+            file: docker-compose-base.yml
+            service: peer
+        container_name: peer1.distributor.in.ril.com
+        environment:
+            - CORE_PEER_CHAINCODELISTENADDRESS=peer1.distributor.in.ril.com:7052
+            - CORE_PEER_ID=peer1.distributor.in.ril.com
+            - CORE_PEER_ADDRESS=peer1.distributor.in.ril.com:7051
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.distributor.in.ril.com:7051
+            - CORE_PEER_GOSSIP_ORGLEADER=${CORE_PEER_GOSSIP_ORGLEADER_PEER1_Distributor}
+            - CORE_PEER_GOSSIP_USELEADERELECTION=${CORE_PEER_GOSSIP_USELEADERELECTION_PEER1_Distributor}
+            - CORE_PEER_LOCALMSPID=DistributorMSP
+            - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/var/hyperledger/users/Admin@distributor.in.ril.com/tls/ca.crt
+            - CORE_PEER_TLS_CLIENTCERT_FILE=/var/hyperledger/users/Admin@distributor.in.ril.com/tls/client.crt
+            - CORE_PEER_TLS_CLIENTKEY_FILE=/var/hyperledger/users/Admin@distributor.in.ril.com/tls/client.key
+            - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb21:5984
+            
+
+        volumes:
+            - ../crypto-config/peerOrganizations/distributor.in.ril.com/peers/peer1.distributor.in.ril.com/msp:/var/hyperledger/msp
+            - ../crypto-config/peerOrganizations/distributor.in.ril.com/peers/peer1.distributor.in.ril.com/tls:/var/hyperledger/tls
+            - ../crypto-config/peerOrganizations/distributor.in.ril.com/users:/var/hyperledger/users
+            - ../network-config/:/var/hyperledger/configs
+        depends_on:
+            - orderer0.in.ril.com
+            - orderer1.in.ril.com
+            - orderer2.in.ril.com
+            - couchdb21
+            - peer0.distributor.in.ril.com
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+        ports:
+          - 8051:7051
+          - 8052:7052
+          - 8053:7053
+
+
+    peer2.distributor.in.ril.com:
+        extends:
+            file: docker-compose-base.yml
+            service: peer
+        container_name: peer2.distributor.in.ril.com
+        environment:
+            - CORE_PEER_CHAINCODELISTENADDRESS=peer2.distributor.in.ril.com:7052
+            - CORE_PEER_ID=peer2.distributor.in.ril.com
+            - CORE_PEER_ADDRESS=peer2.distributor.in.ril.com:7051
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.distributor.in.ril.com:7051
+            - CORE_PEER_GOSSIP_ORGLEADER=${CORE_PEER_GOSSIP_ORGLEADER_PEER2_Distributor}
+            - CORE_PEER_GOSSIP_USELEADERELECTION=${CORE_PEER_GOSSIP_USELEADERELECTION_PEER2_Distributor}
+            - CORE_PEER_LOCALMSPID=DistributorMSP
+            - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/var/hyperledger/users/Admin@distributor.in.ril.com/tls/ca.crt
+            - CORE_PEER_TLS_CLIENTCERT_FILE=/var/hyperledger/users/Admin@distributor.in.ril.com/tls/client.crt
+            - CORE_PEER_TLS_CLIENTKEY_FILE=/var/hyperledger/users/Admin@distributor.in.ril.com/tls/client.key
+            - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb22:5984
+            
+
+        volumes:
+            - ../crypto-config/peerOrganizations/distributor.in.ril.com/peers/peer2.distributor.in.ril.com/msp:/var/hyperledger/msp
+            - ../crypto-config/peerOrganizations/distributor.in.ril.com/peers/peer2.distributor.in.ril.com/tls:/var/hyperledger/tls
+            - ../crypto-config/peerOrganizations/distributor.in.ril.com/users:/var/hyperledger/users
+            - ../network-config/:/var/hyperledger/configs
+        depends_on:
+            - orderer0.in.ril.com
+            - orderer1.in.ril.com
+            - orderer2.in.ril.com
+            - couchdb22
+            - peer0.distributor.in.ril.com
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+        ports:
+          - 9051:7051
+          - 9052:7052
+          - 9053:7053
+    
+    peer0.retailer.in.ril.com:
+        extends:
+            file: docker-compose-base.yml
+            service: peer
+        container_name: peer0.retailer.in.ril.com
+        environment:
+            - CORE_PEER_CHAINCODELISTENADDRESS=peer0.retailer.in.ril.com:7052
+            - CORE_PEER_ID=peer0.retailer.in.ril.com
+            - CORE_PEER_ADDRESS=peer0.retailer.in.ril.com:7051
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.retailer.in.ril.com:7051
+            - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.retailer.in.ril.com:7051
+            - CORE_PEER_GOSSIP_ORGLEADER=${CORE_PEER_GOSSIP_ORGLEADER_PEER0_Retailer}
+            - CORE_PEER_GOSSIP_USELEADERELECTION=${CORE_PEER_GOSSIP_USELEADERELECTION_PEER0_Retailer}
+            - CORE_PEER_LOCALMSPID=RetailerMSP
+            - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/var/hyperledger/users/Admin@retailer.in.ril.com/tls/ca.crt
+            - CORE_PEER_TLS_CLIENTCERT_FILE=/var/hyperledger/users/Admin@retailer.in.ril.com/tls/client.crt
+            - CORE_PEER_TLS_CLIENTKEY_FILE=/var/hyperledger/users/Admin@retailer.in.ril.com/tls/client.key
+            - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb30:5984
+            
+
+        volumes:
+            - ../crypto-config/peerOrganizations/retailer.in.ril.com/peers/peer0.retailer.in.ril.com/msp:/var/hyperledger/msp
+            - ../crypto-config/peerOrganizations/retailer.in.ril.com/peers/peer0.retailer.in.ril.com/tls:/var/hyperledger/tls
+            - ../crypto-config/peerOrganizations/retailer.in.ril.com/users:/var/hyperledger/users
+            - ../network-config/:/var/hyperledger/configs
+
+        depends_on:
+            - orderer0.in.ril.com
+            - orderer1.in.ril.com
+            - orderer2.in.ril.com
+            - couchdb30
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+        ports:
+          - 10051:7051
+          - 10052:7052
+          - 10053:7053
+
+    peer1.retailer.in.ril.com:
+        extends:
+            file: docker-compose-base.yml
+            service: peer
+        container_name: peer1.retailer.in.ril.com
+        environment:
+            - CORE_PEER_CHAINCODELISTENADDRESS=peer1.retailer.in.ril.com:7052
+            - CORE_PEER_ID=peer1.retailer.in.ril.com
+            - CORE_PEER_ADDRESS=peer1.retailer.in.ril.com:7051
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.retailer.in.ril.com:7051
+            - CORE_PEER_GOSSIP_ORGLEADER=${CORE_PEER_GOSSIP_ORGLEADER_PEER1_Retailer}
+            - CORE_PEER_GOSSIP_USELEADERELECTION=${CORE_PEER_GOSSIP_USELEADERELECTION_PEER1_Retailer}
+            - CORE_PEER_LOCALMSPID=RetailerMSP
+            - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/var/hyperledger/users/Admin@retailer.in.ril.com/tls/ca.crt
+            - CORE_PEER_TLS_CLIENTCERT_FILE=/var/hyperledger/users/Admin@retailer.in.ril.com/tls/client.crt
+            - CORE_PEER_TLS_CLIENTKEY_FILE=/var/hyperledger/users/Admin@retailer.in.ril.com/tls/client.key
+            - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb31:5984
+            
+
+        volumes:
+            - ../crypto-config/peerOrganizations/retailer.in.ril.com/peers/peer1.retailer.in.ril.com/msp:/var/hyperledger/msp
+            - ../crypto-config/peerOrganizations/retailer.in.ril.com/peers/peer1.retailer.in.ril.com/tls:/var/hyperledger/tls
+            - ../crypto-config/peerOrganizations/retailer.in.ril.com/users:/var/hyperledger/users
+            - ../network-config/:/var/hyperledger/configs
+        depends_on:
+            - orderer0.in.ril.com
+            - orderer1.in.ril.com
+            - orderer2.in.ril.com
+            - couchdb31
+            - peer0.retailer.in.ril.com
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+        ports:
+          - 11051:7051
+          - 11052:7052
+          - 11053:7053
+
+
+    peer2.retailer.in.ril.com:
+        extends:
+            file: docker-compose-base.yml
+            service: peer
+        container_name: peer2.retailer.in.ril.com
+        environment:
+            - CORE_PEER_CHAINCODELISTENADDRESS=peer2.retailer.in.ril.com:7052
+            - CORE_PEER_ID=peer2.retailer.in.ril.com
+            - CORE_PEER_ADDRESS=peer2.retailer.in.ril.com:7051
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.retailer.in.ril.com:7051
+            - CORE_PEER_GOSSIP_ORGLEADER=${CORE_PEER_GOSSIP_ORGLEADER_PEER2_Retailer}
+            - CORE_PEER_GOSSIP_USELEADERELECTION=${CORE_PEER_GOSSIP_USELEADERELECTION_PEER2_Retailer}
+            - CORE_PEER_LOCALMSPID=RetailerMSP
+            - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/var/hyperledger/users/Admin@retailer.in.ril.com/tls/ca.crt
+            - CORE_PEER_TLS_CLIENTCERT_FILE=/var/hyperledger/users/Admin@retailer.in.ril.com/tls/client.crt
+            - CORE_PEER_TLS_CLIENTKEY_FILE=/var/hyperledger/users/Admin@retailer.in.ril.com/tls/client.key
+            - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb32:5984
+            
+
+        volumes:
+            - ../crypto-config/peerOrganizations/retailer.in.ril.com/peers/peer2.retailer.in.ril.com/msp:/var/hyperledger/msp
+            - ../crypto-config/peerOrganizations/retailer.in.ril.com/peers/peer2.retailer.in.ril.com/tls:/var/hyperledger/tls
+            - ../crypto-config/peerOrganizations/retailer.in.ril.com/users:/var/hyperledger/users
+            - ../network-config/:/var/hyperledger/configs
+        depends_on:
+            - orderer0.in.ril.com
+            - orderer1.in.ril.com
+            - orderer2.in.ril.com
+            - couchdb32
+            - peer0.retailer.in.ril.com
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+        ports:
+          - 12051:7051
+          - 12052:7052
+          - 12053:7053
+
+    peer0.regulator.in.ril.com:
+        extends:
+            file: docker-compose-base.yml
+            service: peer
+        container_name: peer0.regulator.in.ril.com
+        environment:
+            - CORE_PEER_CHAINCODELISTENADDRESS=peer0.regulator.in.ril.com:7052
+            - CORE_PEER_ID=peer0.regulator.in.ril.com
+            - CORE_PEER_ADDRESS=peer0.regulator.in.ril.com:7051
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer1.regulator.in.ril.com:7051
+            - CORE_PEER_GOSSIP_EXTERNALENDPOINT=peer0.regulator.in.ril.com:7051
+            - CORE_PEER_GOSSIP_ORGLEADER=${CORE_PEER_GOSSIP_ORGLEADER_PEER0_Regulator}
+            - CORE_PEER_GOSSIP_USELEADERELECTION=${CORE_PEER_GOSSIP_USELEADERELECTION_PEER0_Regulator}
+            - CORE_PEER_LOCALMSPID=RegulatorMSP
+            - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/var/hyperledger/users/Admin@regulator.in.ril.com/tls/ca.crt
+            - CORE_PEER_TLS_CLIENTCERT_FILE=/var/hyperledger/users/Admin@regulator.in.ril.com/tls/client.crt
+            - CORE_PEER_TLS_CLIENTKEY_FILE=/var/hyperledger/users/Admin@regulator.in.ril.com/tls/client.key
+            - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb40:5984
+            
+
+        volumes:
+            - ../crypto-config/peerOrganizations/regulator.in.ril.com/peers/peer0.regulator.in.ril.com/msp:/var/hyperledger/msp
+            - ../crypto-config/peerOrganizations/regulator.in.ril.com/peers/peer0.regulator.in.ril.com/tls:/var/hyperledger/tls
+            - ../crypto-config/peerOrganizations/regulator.in.ril.com/users:/var/hyperledger/users
+            - ../network-config/:/var/hyperledger/configs
+
+        depends_on:
+            - orderer0.in.ril.com
+            - orderer1.in.ril.com
+            - orderer2.in.ril.com
+            - couchdb40
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+        ports:
+          - 13051:7051
+          - 13052:7052
+          - 13053:7053
+
+    peer1.regulator.in.ril.com:
+        extends:
+            file: docker-compose-base.yml
+            service: peer
+        container_name: peer1.regulator.in.ril.com
+        environment:
+            - CORE_PEER_CHAINCODELISTENADDRESS=peer1.regulator.in.ril.com:7052
+            - CORE_PEER_ID=peer1.regulator.in.ril.com
+            - CORE_PEER_ADDRESS=peer1.regulator.in.ril.com:7051
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.regulator.in.ril.com:7051
+            - CORE_PEER_GOSSIP_ORGLEADER=${CORE_PEER_GOSSIP_ORGLEADER_PEER1_Regulator}
+            - CORE_PEER_GOSSIP_USELEADERELECTION=${CORE_PEER_GOSSIP_USELEADERELECTION_PEER1_Regulator}
+            - CORE_PEER_LOCALMSPID=RegulatorMSP
+            - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/var/hyperledger/users/Admin@regulator.in.ril.com/tls/ca.crt
+            - CORE_PEER_TLS_CLIENTCERT_FILE=/var/hyperledger/users/Admin@regulator.in.ril.com/tls/client.crt
+            - CORE_PEER_TLS_CLIENTKEY_FILE=/var/hyperledger/users/Admin@regulator.in.ril.com/tls/client.key
+            - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb41:5984
+            
+
+        volumes:
+            - ../crypto-config/peerOrganizations/regulator.in.ril.com/peers/peer1.regulator.in.ril.com/msp:/var/hyperledger/msp
+            - ../crypto-config/peerOrganizations/regulator.in.ril.com/peers/peer1.regulator.in.ril.com/tls:/var/hyperledger/tls
+            - ../crypto-config/peerOrganizations/regulator.in.ril.com/users:/var/hyperledger/users
+            - ../network-config/:/var/hyperledger/configs
+        depends_on:
+            - orderer0.in.ril.com
+            - orderer1.in.ril.com
+            - orderer2.in.ril.com
+            - couchdb41
+            - peer0.regulator.in.ril.com
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+        ports:
+          - 14051:7051
+          - 14052:7052
+          - 14053:7053
+
+
+    peer2.regulator.in.ril.com:
+        extends:
+            file: docker-compose-base.yml
+            service: peer
+        container_name: peer2.regulator.in.ril.com
+        environment:
+            - CORE_PEER_CHAINCODELISTENADDRESS=peer2.regulator.in.ril.com:7052
+            - CORE_PEER_ID=peer2.regulator.in.ril.com
+            - CORE_PEER_ADDRESS=peer2.regulator.in.ril.com:7051
+            - CORE_PEER_GOSSIP_BOOTSTRAP=peer0.regulator.in.ril.com:7051
+            - CORE_PEER_GOSSIP_ORGLEADER=${CORE_PEER_GOSSIP_ORGLEADER_PEER2_Regulator}
+            - CORE_PEER_GOSSIP_USELEADERELECTION=${CORE_PEER_GOSSIP_USELEADERELECTION_PEER2_Regulator}
+            - CORE_PEER_LOCALMSPID=RegulatorMSP
+            - CORE_PEER_TLS_CLIENTROOTCAS_FILES=/var/hyperledger/users/Admin@regulator.in.ril.com/tls/ca.crt
+            - CORE_PEER_TLS_CLIENTCERT_FILE=/var/hyperledger/users/Admin@regulator.in.ril.com/tls/client.crt
+            - CORE_PEER_TLS_CLIENTKEY_FILE=/var/hyperledger/users/Admin@regulator.in.ril.com/tls/client.key
+            - CORE_LEDGER_STATE_STATEDATABASE=CouchDB
+            - CORE_LEDGER_STATE_COUCHDBCONFIG_COUCHDBADDRESS=couchdb42:5984
+            
+
+        volumes:
+            - ../crypto-config/peerOrganizations/regulator.in.ril.com/peers/peer2.regulator.in.ril.com/msp:/var/hyperledger/msp
+            - ../crypto-config/peerOrganizations/regulator.in.ril.com/peers/peer2.regulator.in.ril.com/tls:/var/hyperledger/tls
+            - ../crypto-config/peerOrganizations/regulator.in.ril.com/users:/var/hyperledger/users
+            - ../network-config/:/var/hyperledger/configs
+        depends_on:
+            - orderer0.in.ril.com
+            - orderer1.in.ril.com
+            - orderer2.in.ril.com
+            - couchdb42
+            - peer0.regulator.in.ril.com
+        networks:
+          behave:
+             aliases:
+               - ${CORE_PEER_NETWORKID}
+        ports:
+          - 15051:7051
+          - 15052:7052
+          - 15053:7053
