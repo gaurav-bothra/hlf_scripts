@@ -3,3 +3,7 @@ blockchain-explorer/
 chaincode/
 fabric-config
 server/
+client/
+crypto-config/
+deployment/
+./SmartpharmaContract.go

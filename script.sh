@@ -110,6 +110,10 @@ echo "Joining Channel of RLS peer0"
 docker exec -e "CORE_PEER_LOCALMSPID=RLSMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@rls.in.ril.com/msp" peer0.rls.in.ril.com peer channel join -b commonchannel.block
 docker exec -e "CORE_PEER_LOCALMSPID=RLSMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@rls.in.ril.com/msp" peer0.rls.in.ril.com peer channel join -b org12.block
 
+echo "Joining Channel of RLS Anchor Peer"
+docker exec -e "CORE_PEER_LOCALMSPID=RLSMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@rls.in.ril.com/msp" peer0.rls.in.ril.com peer channel update -o orderer0.in.ril.com:7050 -c commonchannel -f /var/hyperledger/configs/RLSMSPanchorscommonchannel.tx
+docker exec -e "CORE_PEER_LOCALMSPID=RLSMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@rls.in.ril.com/msp" peer0.rls.in.ril.com peer channel update -o orderer0.in.ril.com:7050 -c org12 -f /var/hyperledger/configs/RLSMSPanchorsorg12.tx
+
 echo "-----------------------Copy-----Peer 1 rls---------------------"
 docker cp commonchannel.block peer1.rls.in.ril.com:/commonchannel.block
 docker cp org12.block peer1.rls.in.ril.com:/org12.block
@@ -123,6 +127,7 @@ docker exec -e "CORE_PEER_LOCALMSPID=RLSMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hy
 docker exec -e "CORE_PEER_LOCALMSPID=RLSMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@rls.in.ril.com/msp" peer1.rls.in.ril.com peer channel join -b org23.block
 docker exec -e "CORE_PEER_LOCALMSPID=RLSMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@rls.in.ril.com/msp" peer1.rls.in.ril.com peer channel join -b org2only.block
 
+
 echo "-----------------------Copy-----Peer 2 rls---------------------"
 docker cp commonchannel.block peer2.rls.in.ril.com:/commonchannel.block
 docker cp org12.block peer2.rls.in.ril.com:/org12.block
@@ -135,6 +140,7 @@ docker exec -e "CORE_PEER_LOCALMSPID=RLSMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hy
 docker exec -e "CORE_PEER_LOCALMSPID=RLSMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@rls.in.ril.com/msp" peer2.rls.in.ril.com peer channel join -b org12.block
 docker exec -e "CORE_PEER_LOCALMSPID=RLSMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@rls.in.ril.com/msp" peer2.rls.in.ril.com peer channel join -b org23.block
 docker exec -e "CORE_PEER_LOCALMSPID=RLSMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@rls.in.ril.com/msp" peer2.rls.in.ril.com peer channel join -b org2only.block
+
 
 echo "----------------------------Removing Private Channel Files---------------------"
 rm org2only.block
@@ -164,6 +170,11 @@ echo "Joining Channel of Distributor peer0"
 docker exec -e "CORE_PEER_LOCALMSPID=DistributorMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@distributor.in.ril.com/msp" peer0.distributor.in.ril.com peer channel join -b commonchannel.block
 docker exec -e "CORE_PEER_LOCALMSPID=DistributorMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@distributor.in.ril.com/msp" peer0.distributor.in.ril.com peer channel join -b org23.block
 
+echo "Joining Channel of Distributor Anchor Peer"
+docker exec -e "CORE_PEER_LOCALMSPID=DistributorMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@distributor.in.ril.com/msp" peer0.distributor.in.ril.com peer channel update -o orderer0.in.ril.com:7050 -c commonchannel -f /var/hyperledger/configs/DistributorMSPanchorscommonchannel.tx
+docker exec -e "CORE_PEER_LOCALMSPID=DistributorMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@distributor.in.ril.com/msp" peer0.distributor.in.ril.com peer channel update -o orderer0.in.ril.com:7050 -c org23 -f /var/hyperledger/configs/DistributorMSPanchorsorg23.tx
+
+
 echo "----------------------Copy------Peer 1 distributor---------------------"
 docker cp commonchannel.block peer1.distributor.in.ril.com:/commonchannel.block
 docker cp org23.block peer1.distributor.in.ril.com:/org23.block
@@ -189,6 +200,7 @@ docker exec -e "CORE_PEER_LOCALMSPID=DistributorMSP" -e "CORE_PEER_MSPCONFIGPATH
 docker exec -e "CORE_PEER_LOCALMSPID=DistributorMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@distributor.in.ril.com/msp" peer2.distributor.in.ril.com peer channel join -b org34.block
 docker exec -e "CORE_PEER_LOCALMSPID=DistributorMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@distributor.in.ril.com/msp" peer2.distributor.in.ril.com peer channel join -b org3only.block
 
+
 echo "----------------------------Removing Private Channel Files---------------------"
 rm org3only.block
 rm org23.block
@@ -211,6 +223,11 @@ docker cp org34.block peer0.retailer.in.ril.com:/org34.block
 echo "Joining Channel of Retailer peer0"
 docker exec -e "CORE_PEER_LOCALMSPID=RetailerMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@retailer.in.ril.com/msp" peer0.retailer.in.ril.com peer channel join -b commonchannel.block
 docker exec -e "CORE_PEER_LOCALMSPID=RetailerMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@retailer.in.ril.com/msp" peer0.retailer.in.ril.com peer channel join -b org34.block
+
+echo "Joining Channel of Retailer Anchor Peer"
+docker exec -e "CORE_PEER_LOCALMSPID=RetailerMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@retailer.in.ril.com/msp" peer0.retailer.in.ril.com peer channel update -o orderer0.in.ril.com:7050 -c commonchannel -f /var/hyperledger/configs/RetailerMSPanchorscommonchannel.tx
+docker exec -e "CORE_PEER_LOCALMSPID=RetailerMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@retailer.in.ril.com/msp" peer0.retailer.in.ril.com peer channel update -o orderer0.in.ril.com:7050 -c org34 -f /var/hyperledger/configs/RetailerMSPanchorsorg34.tx
+
 
 echo "-----------------------Copy----Peer 1 Retailer---------------------"
 docker cp commonchannel.block peer1.retailer.in.ril.com:/commonchannel.block
@@ -243,13 +260,25 @@ echo "----------------------------------------------org5------------------------
 echo "-----------------------Copy Peer 0 Regulator---------------------"
 docker cp commonchannel.block peer0.regulator.in.ril.com:/commonchannel.block
 docker exec -e "CORE_PEER_LOCALMSPID=RegulatorMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@regulator.in.ril.com/msp" peer0.regulator.in.ril.com peer channel join -b commonchannel.block
+docker exec -e "CORE_PEER_LOCALMSPID=RegulatorMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@regulator.in.ril.com/msp" peer0.regulator.in.ril.com peer channel update -o orderer0.in.ril.com:7050 -c commonchannel -f /var/hyperledger/configs/RegulatorMSPanchorscommonchannel.tx
+
 echo "---------------------------Copy Peer 1 regulator---------------------"
+
 docker cp commonchannel.block peer1.regulator.in.ril.com:/commonchannel.block
 docker exec -e "CORE_PEER_LOCALMSPID=RegulatorMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@regulator.in.ril.com/msp" peer1.regulator.in.ril.com peer channel join -b commonchannel.block
+
 
 echo "----------------------------Copy Peer 2 regulator---------------------"
 docker cp commonchannel.block peer2.regulator.in.ril.com:/commonchannel.block
 docker exec -e "CORE_PEER_LOCALMSPID=RegulatorMSP" -e "CORE_PEER_MSPCONFIGPATH=/var/hyperledger/users/Admin@regulator.in.ril.com/msp" peer2.regulator.in.ril.com peer channel join -b commonchannel.block
 
+
 echo "----------------------------Removing Private Channel Files---------------------"
 rm commonchannel.block
+
+# echo "copying artifacts for client"
+# cp -R crypto-config ./client/rls/
+
+# docker exec -it cli.rls.in.ril.com peer chaincode install -n SmartPharmaContract -v 1.0 -l node -p /opt/gopath/src/github.com/chaincode
+# docker exec -it cli.rls.in.ril.com peer chaincode instantiate -o orderer0.in.ril.com:7050 -C org12 -n SmartPharmaContract -v 1.0 -c '{"Args":["initLedger"]}'
+# docker exec -it cli.rls.in.ril.com peer chaincode invoke -o orderer0.in.ril.com:7050 -n SmartPharmaContract -c '{"Args":["rls_generate_po", "dcs", "s", "sdc","sdc","sdcs","sd","df"]}' -C org12
